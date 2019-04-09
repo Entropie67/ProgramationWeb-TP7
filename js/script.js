@@ -28,3 +28,21 @@ jQuery(document).ready(function($) {
     })
     */
 });
+
+class Item {
+    constructor(tache, checked){
+        if (typeof (tache) == "string"){
+            this.tache = tache;
+        }
+        else{
+            alert("No string");
+        }
+        if (typeof (checked) == "boolean"){
+            this.tache = checked;
+        }
+        else{
+            alert("No boolean");
+        }
+        t
+    }
+}
