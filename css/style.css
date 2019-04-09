@@ -1,0 +1,39 @@
+body{
+    background-color: antiquewhite;
+}
+input{
+    border-color: darkgray;
+    margin: 0.5em;
+}
+
+button{
+    background-color: darkorange;
+    color: antiquewhite;
+    margin: 0.5em;
+}
+form{
+    display: flex;
+}
+li{
+    border-color: white;
+    padding: 5px;
+    background-color: darkgray;
+    border: solid;
+    border-color: antiquewhite;
+    border-width: 1px;
+}
+.check{
+    color: white;
+    background-color: black;
+    text-decoration: line-through;
+
+}
+ul{
+
+    list-style-type: none;
+    width: 200px;
+    font-family: sans-serif;
+}
+footer{
+    font-size: 50%;
+}
