@@ -48,12 +48,21 @@ class Item {
 
 $(".save").click(function () {
     console.log("coucou");
+    var tab = [];
     $("li").each(function () {
         var instance = new Item($(this).text(),$(this).hasClass("check"));
         var text = JSON.stringify(instance);
         $('.démonstration').append(text);
         console.log( JSON.stringify(instance));
+        tab.push(text);
+
     })
+    if (typeof (Storage) !== "undefined"){
+        console.log("Storage, ok");
+        localStorage.setItem("maListe", JSON.stringify(tab));
+
+    }
+    console.log(tab);
 });
 
 
