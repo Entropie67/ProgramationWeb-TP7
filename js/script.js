@@ -65,7 +65,28 @@ $(".save").click(function () {
     console.log(tab);
 });
 
+$(".restaure").click(function () {
+    console.log("restauration de la liste");
+    var tabsave = JSON.parse(localStorage.getItem("maListe"));
+    console.log("Données réccupérées :",tabsave);
+    $("ul").text("");
+    tabsave.forEach(function(element) {
+        console.log(element);
+        var obj = JSON.parse(element);
+        if (obj.checked) {
+            console.log("C'est un checké");
+            laclasse = "check"
+        }
+        else {
+            console.log("c'est un non checké");
+            laclasse = "nocheck"
+        }
+        var nouveau = "<li class = ' " + laclasse + " ' >" + obj.tache + "</li>";
+        $("ul").append(nouveau);
 
+
+    });
+});
 
 
 
