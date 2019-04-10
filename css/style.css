@@ -6,8 +6,21 @@ input{
     margin: 0.5em;
 }
 
-button{
+.ajouter{
     background-color: darkorange;
+    color: antiquewhite;
+    margin: 0.5em;
+    border-radius: 5px;
+}
+.save{
+    background-color: darkgreen;
+    color: antiquewhite;
+    margin: 0.5em;
+    border-radius: 5px;
+}
+.restaure{
+    background-color: darkblue;
+    border-radius: 5px;
     color: antiquewhite;
     margin: 0.5em;
 }

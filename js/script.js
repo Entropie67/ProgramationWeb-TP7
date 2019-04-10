@@ -3,10 +3,10 @@ jQuery(document).ready(function($) {
     // Votre code ici avec les appels à la fonction $()
 
     // Ajout de l'item
-    $("button").click(function () {
+    $(".ajouter").click(function () {
         var ajout = "<li>" + $("input").val() + "</li>";
         $("ul").append(ajout);
-    })
+    });
     // Avec délégation
     $("ul").on("click", "li", function(){
         if ($(this).attr("class") == "check") {
@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
         else{
             $(this).attr({class: "check"});
         }
-    } )
+    } );
     /*
     // Sans délégation
     $("li").click(function(){
@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
         }
     })
     */
-});
+
 
 class Item {
     constructor(tache, checked){
@@ -38,11 +38,26 @@ class Item {
             alert("No string");
         }
         if (typeof (checked) == "boolean"){
-            this.tache = checked;
+            this.checked = checked;
         }
         else{
             alert("No boolean");
         }
-        t
     }
 }
+
+$(".save").click(function () {
+    console.log("coucou");
+    $("li").each(function () {
+        var instance = new Item($(this).text(),$(this).hasClass("check"));
+        var text = JSON.stringify(instance);
+        $('.démonstration').append(text);
+        console.log( JSON.stringify(instance));
+    })
+});
+
+
+
+
+
+});
